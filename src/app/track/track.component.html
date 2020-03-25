@@ -1,0 +1,30 @@
+<!-- <agm-map [latitude]='latitude' [longitude]='longitude' [backgroundColor]='backgroundColor' (mapClick)="onChooseLocation($event)">
+    <agm-marker [latitude]="latitude" [longitude]="longitude" *ngIf="locationChosen">
+
+            <agm-info-window>
+                    <h3><strong>Confirmed Case</strong></h3>
+                    <p>Description</p>
+                </agm-info-window>
+
+    </agm-marker>
+    
+</agm-map> -->
+<agm-map [latitude]='latitude' [longitude]='longitude' [backgroundColor]='backgroundColor' (mapClick)="onChooseLocation($event)">
+    <agm-marker-cluster [minimumClusterSize]= "minClusterSize">
+            <agm-marker 
+            *ngFor="let m of markers; let i = index"
+            (markerClick)="clickedMarker(m.label, i)"
+            [latitude]="m.lat"
+            [longitude]="m.lng"
+            [label]="m.label"
+            [markerDraggable]="m.draggable"
+            (dragEnd)="markerDragEnd(m, $event)">
+            
+            <agm-info-window>
+                <h3><strong>Confirmed Case</strong></h3>
+                    <p>Description</p>
+            </agm-info-window>
+          
+        </agm-marker>
+    </agm-marker-cluster>
+</agm-map>
