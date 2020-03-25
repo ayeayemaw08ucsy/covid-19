@@ -10,7 +10,7 @@
     
 </agm-map> -->
 <agm-map [latitude]='latitude' [longitude]='longitude' [backgroundColor]='backgroundColor' (mapClick)="onChooseLocation($event)">
-    <agm-marker-cluster [minimumClusterSize]= "minClusterSize">
+        <agm-marker-cluster imagePath="https://raw.githubusercontent.com/googlemaps/v3-utility-library/master/markerclustererplus/images/m">
             <agm-marker 
             *ngFor="let m of markers; let i = index"
             (markerClick)="clickedMarker(m.label, i)"

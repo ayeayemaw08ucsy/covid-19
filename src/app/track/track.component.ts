@@ -18,7 +18,7 @@ export class TrackComponent {
   longitude = 95.77653629687501;
   backgroundColor = 'white';
   locationChosen = false;
-  minClusterSize = 50;
+  //minClusterSize = 50;
 
   markers: marker[] = [
 	  {

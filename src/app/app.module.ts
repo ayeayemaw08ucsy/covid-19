@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TrackComponent } from './track/track.component';
 import { LayoutComponent } from './layout/layout.component';
 import { AgmCoreModule } from '@agm/core';
-
+import { AgmJsMarkerClustererModule } from '@agm/js-marker-clusterer';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +20,8 @@ import { AgmCoreModule } from '@agm/core';
     AppRoutingModule,
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyBynvPBrc_MTmayQullEFbWlLr18IcIhiw'
-    })
+    }),
+    AgmJsMarkerClustererModule
   ],
   providers: [],
   bootstrap: [AppComponent]
