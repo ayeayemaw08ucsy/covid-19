@@ -62,7 +62,6 @@ export class TrackComponent  implements OnInit {
 	ngOnInit(): void {
 
 		 this.apiService.getMarkerData().subscribe(m =>this.markers = m);
-		
 
   }
  
