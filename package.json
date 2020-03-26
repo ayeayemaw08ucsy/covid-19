@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.0.3",
     "@angular/router": "~9.0.3",
     "@types/googlemaps": "^3.39.3",
+    "@zeit/ng-deploy": "^0.3.0",
     "js-marker-clusterer": "^1.0.0",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
